@@ -198,18 +198,19 @@ public class UnitTest1
     }
 
     [Fact]
-    public void oneKnownWordMessageCrack()
+    public void OneKnownWordMessageCrack()
     {
         string result = CaesarCipher.Crack("Khoor");
         Assert.Equal(result, "Hello");
     }
 
     [Fact]
-    public void oneUnknownWordMessageCrack()
+    public void OneUnknownWordMessageCrack()
     {
         string result = CaesarCipher.Crack("ixfn");
         Assert.NotEqual(result, "fuck");
     }
+
 
 /*
  * 1.What if only one word is being encoded?
