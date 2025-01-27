@@ -184,7 +184,7 @@ public class UnitTest1
     }
 
 /*
- * What if only one word is being encoded?
+ * 1.What if only one word is being encoded?
    2. What if multiple words?
    3. What about upper and lower case?
    4. What if there are leading or trailing spaces?
