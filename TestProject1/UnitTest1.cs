@@ -176,13 +176,17 @@ public class UnitTest1
     [Fact]
     public void TestEncodeShiftIsNaN()
     {
-        Assert.True(false);
+        int? shift = null;
+        var result = Assert.Throws<ArgumentException>(() => CaesarCipher.Encode("hello", shift));
+        Assert.Equal("Invalid value (Parameter 'shift')", result.Message);
     }
     
     [Fact]
     public void TestDecodeShiftIsNaN()
     {
-        Assert.True(false);
+        int? shift = null;
+        var result = Assert.Throws<ArgumentException>(() => CaesarCipher.Decode("hello", shift));
+        Assert.Equal("Invalid value (Parameter 'shift')", result.Message);
     }
 
 /*
