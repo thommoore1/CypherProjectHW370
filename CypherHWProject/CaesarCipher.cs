@@ -77,18 +77,18 @@ public static class CaesarCipher
 
     public static string Crack(string encodedMessage)
     {
-        //uses this list of 100 most common words in english to figure out the shift, so it only works if the message has one of these words
+        //uses this list of 100 most common words and some extras in english to figure out the shift, so it only works if the message has one of these words
         List<string> mostCommonWords= new List<string>(){
             "the", "be", "to", "of", "and", "a", "in", "that", "have", "I",
-            "it", "for", "not", "on", "with", "he", "as", "you", "do", "at",
-            "this", "but", "his", "by", "from", "they", "we", "say", "her", "she",
+            "it", "for", "not", "discombobulate", "on", "with", "he", "as", "you", "do", "at",
+            "this", "but", "group", "his", "by", "from", "they", "we", "say", "her", "she",
             "or", "an", "will", "my", "one", "all", "would", "there", "their", "what",
-            "so", "up", "out", "if", "about", "who", "get", "which", "go", "me",
+            "so", "up", "out", "if", "about", "nazi", "who", "get", "which", "go", "me",
             "when", "make", "can", "like", "time", "no", "just", "him", "know", "take",
             "people", "into", "year", "your", "good", "some", "could", "them", "see", "other",
-            "than", "then", "now", "look", "only", "come", "its", "over", "think", "also",
+            "than", "then", "now", "look", "only", "come", "its", "government", "over", "think", "also",
             "back", "after", "use", "two", "how", "our", "work", "first", "well", "way",
-            "even", "new", "want", "because", "any", "these", "give", "day", "most", "us"
+            "even", "new", "want", "because", "any", "these", "give", "day", "most", "us", "hello"
         };
         int shift = 0;
 
