@@ -211,7 +211,6 @@ public class UnitTest1
         Assert.NotEqual(result, "fuck");
     }
 
-
 /*
  * 1.What if only one word is being encoded?
    2. What if multiple words?
