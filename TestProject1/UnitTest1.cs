@@ -120,13 +120,15 @@ public class UnitTest1
     [Fact]
     public void TestEncodeReturnsNull()
     {
-        Assert.True(false);
+        string result = CaesarCipher.Encode("", 1);
+        Assert.Equal(result, String.Empty);
     }
     
     [Fact]
     public void TestDecodeReturnsNull()
     {
-        Assert.True(false);
+        string result = CaesarCipher.Decode("", 1);
+        Assert.Equal(result, String.Empty);
     }
 
     [Fact]

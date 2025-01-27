@@ -46,6 +46,7 @@ public static class CaesarCipher
         
         // Normalize the shift to avoid unnecessary cycles
         shift = shift % 26;
+        
         foreach (char c in encoded)
         {
             if (char.IsLetter(c))
