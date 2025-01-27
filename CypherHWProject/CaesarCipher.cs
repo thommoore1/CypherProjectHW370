@@ -105,7 +105,7 @@ public static class CaesarCipher
         //these for loops cycle through each encoded word in the list and go through every shift untill it matches a word from the common word list  and then returns a shift key
         foreach (string word in tempArray)
         {
-            for (int i = 1; i < 27; i++)
+            for (int i = 1; i < 26; i++)
             {
                 string  tempWord = Decode(word, i);
                 foreach (string commonWord in mostCommonWords)
