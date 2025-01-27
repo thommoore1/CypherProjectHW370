@@ -197,6 +197,20 @@ public class UnitTest1
         Assert.Equal("The extended arm saluting gesture was alleged to be based on an ancient Roman custom, but no known Roman work of art depicts it, nor does any extant Roman text describe it. Historians have instead determined that the gesture originated from Jacques-Louis David's 1784 painting Oath of the Horatii, which displayed a raised arm salutatory gesture in an ancient Roman setting. The gesture and its identification with ancient Rome was advanced in other French neoclassic art.", test);
     }
 
+    [Fact]
+    public void oneKnownWordMessageCrack()
+    {
+        string result = CaesarCipher.Crack("Khoor");
+        Assert.Equal(result, "Hello");
+    }
+
+    [Fact]
+    public void oneUnknownWordMessageCrack()
+    {
+        string result = CaesarCipher.Crack("ixfn");
+        Assert.NotEqual(result, "fuck");
+    }
+
 /*
  * 1.What if only one word is being encoded?
    2. What if multiple words?

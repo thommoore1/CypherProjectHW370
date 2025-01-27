@@ -77,7 +77,10 @@ public static class CaesarCipher
 
     public static string Crack(string encodedMessage)
     {
-        //uses this list of 100 most common words and some extras in english to figure out the shift, so it only works if the message has one of these words
+        //i think letter frequency analysis is dumb so i decided to use common word comparison
+        //the only problem with this is if a single word message is attempted to crack and it isnt a known word but even then letter frequency analysis would probably be useless also and you would just have to brute force it
+        
+        //this is a list of the hundred most common english words and some other words i thought relevant
         List<string> mostCommonWords= new List<string>(){
             "the", "be", "to", "of", "and", "a", "in", "that", "have", "I",
             "it", "for", "not", "discombobulate", "on", "with", "he", "as", "you", "do", "at",
@@ -98,6 +101,8 @@ public static class CaesarCipher
         }
         string tempMessage = encodedMessage.Trim();
         string[] tempArray = tempMessage.Split(' ');
+        
+        //these for loops cycle through each encoded word in the list and go through every shift untill it matches a word from the common word list  and then returns a shift key
         foreach (string word in tempArray)
         {
             for (int i = 1; i < 27; i++)
@@ -105,7 +110,7 @@ public static class CaesarCipher
                 string  tempWord = Decode(word, i);
                 foreach (string commonWord in mostCommonWords)
                 {
-                    if (commonWord == tempWord)
+                    if (commonWord == tempWord.ToLower())
                     {
                         shift = i;
                         break;
