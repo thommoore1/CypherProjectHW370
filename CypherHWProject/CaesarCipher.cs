@@ -74,4 +74,9 @@ public static class CaesarCipher
 
         return result.ToString();
     }
+
+    public static string Crack(string encodedMessage)
+    {
+        
+    }
 }

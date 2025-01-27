@@ -32,6 +32,8 @@ class Program
             Console.WriteLine($"Encoded string: {encoded}");
             string decoded = CaesarCipher.Decode(encoded, shift);
             Console.WriteLine($"Decoded string: {decoded}");
+            string cracked = CaesarCipher.Crack(encoded);
+            Console.WriteLine($"Cracked string: {cracked}");
         }
     }
 }
