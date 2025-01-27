@@ -146,7 +146,7 @@ public class UnitTest1
     [Fact]
     public void TestEncodeShiftIsNegative()
     {
-        string result = CaesarCipher.Decode("hello", -1);
+        string result = CaesarCipher.Encode("hello", -1);
         Assert.Equal(result, "gdkkn");
     }
     
